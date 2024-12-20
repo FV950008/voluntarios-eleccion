@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recolección de Voluntarios para la Elección</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            font-size: 1rem;
+            margin: 10px 0 5px;
+            display: block;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .optional {
+            font-size: 0.9rem;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Recolección de Voluntarios</h1>
+        <form action="https://formspree.io/f/your-email" method="POST">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="dni">DNI</label>
+            <input type="text" id="dni" name="dni" required>
+
+            <label for="phone">Teléfono de Contacto</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="email">Correo Electrónico (opcional)</label>
+            <input type="email" id="email" name="email" class="optional">
+
+            <label for="role">Rol</label>
+            <select id="role" name="role" required>
+                <option value="fiscal">Fiscal</option>
+                <option value="logistica">Logística</option>
+                <option value="transporte">Transporte</option>
+                <option value="reclutador">Reclutador</option>
+            </select>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>
